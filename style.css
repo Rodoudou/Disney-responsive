@@ -1,0 +1,318 @@
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    color: #f9f9f9;
+    background-color: #040714;
+    background-image: url("https://cannonball-cdn.bamgrid.com/assets/originals/108839_334165_DIS_STAR_CD_Desktop_ROUTE_A-ALT_st24@1,5x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+}
+
+#grille{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "banner banner"
+    "centro centro"
+    "bas bas";
+    grid-gap: 10px;
+    margin: 80px;
+  }
+  
+  nav {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+  }
+
+  .hidden-logoNav,.hidden-sinup {
+    display: none;
+  }
+  
+  /* LOGOS */
+  .logo-nav img{
+    position: absolute;
+    width: 80px;
+    height: 43.53px;
+    left: 36px;
+    top: 10px;
+  }
+  
+  #logo2 img{
+    width: 80px;
+    height: 43.53px;
+  } 
+
+.logo img {
+    width: 100%;
+  }
+#logo img{
+  width: 380px;
+  height: 206.81px;
+}
+  /* Button scrolldown */
+.scrolldown {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    top: 800px;
+  }
+  .scrolldown svg {
+    fill: #f9f9f9;
+    width: 32px;
+  }
+  
+  .bounce {
+    animation: bounce 2s ease infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  .transparent {
+    background-color: #090b13;
+    transition: all 1.5s ease-out;
+  }
+
+
+banner{
+    grid-area: banner;
+}
+haut {
+    grid-area: haut;
+    display: flex; 
+    position: relative;
+}
+.content-top{
+  /* position: relative; */
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+
+.buttons-top{
+    display: flex;
+    justify-content: space-around;
+}
+
+centro {
+    grid-area: centro;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex; 
+    margin-top: 250px;
+}
+
+bas{
+  grid-area: bas;
+  
+
+}
+
+footer{
+    font-size: 12px;
+    color: hsla(0, 0%, 75.3%, 0.8);
+    text-align: center;
+}
+
+footer p{
+    font-size: 12px;
+  }
+  
+  footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+.grid-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+}
+.grid-1 img {
+    transition: transform 0.4s;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+    border-radius: 5px;
+  }
+.grille1{
+  text-align: center;
+}
+.grille2{
+  text-align: center;
+}
+
+.icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 80px;
+
+}
+/* BUTTONS */
+.btn-primary {
+    position: absolute;
+    right: 180px;
+    top: 10px;
+    color: #f9f9f9;
+    background-color: #0063e5;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 122.11px;
+    height: 38px;
+    font-size: 18px;
+    padding: 16.5px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+ 
+  .btn-primary2 {
+    background-color: #0063e5;
+    width: 100%;
+    max-width: 340px;
+    min-width: auto;
+    width: 320px;
+    height: 60px;
+    margin-bottom: 0;
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: 18px;
+    padding: 16.5px 14px;
+    color: #f9f9f9;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+  
+  .btn-tertiary {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 122.11px;
+    height: 38px;
+    font-size: 18px;
+    padding: 16.5px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+  }
+  
+  #signup-bottom {
+    font-size: 18px;
+    padding: 16.5px 14px;
+    margin: 0 0 30px;
+  }
+  
+  #signup,
+  #signup-bottom {
+    display: flex;
+    justify-content: center;
+    
+  }
+.image img{
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px){
+
+  #grille{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "banner banner"
+    "centro centro"
+    "bas bas";
+    grid-gap: 5px;
+    margin: 40px;
+  }
+    haut .content-top,button{
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+    haut .buttons-top{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    #logo img{
+      width: 200px;
+      height: 108.84px;
+    }
+    
+    centro {
+        flex-direction: column;
+        margin-top: 200px;
+        text-align: center;
+    }
+    img{
+        max-width: 445px;
+        max-height: 363.73px;
+    }
+    .btn-left{
+      border-bottom: 1px solid red;
+      padding-bottom: 50px;
+    }
+    .scrolldown {
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      top: 1000px;left: 50%;
+    }
+}
