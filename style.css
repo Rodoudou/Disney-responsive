@@ -31,22 +31,21 @@ body {
   grid-gap: 10px;
   margin: 80px;
 }
-.background-image{
+.background-image {
   background-image: url(https://cannonball-cdn.bamgrid.com/assets/originals/108839_334165_DIS_STAR_CD_Desktop_ROUTE_A-ALT_st24@1,5x.jpg);
   position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 200%;
-    z-index: -1;
-    pointer-events: none;
-    overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 200%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
 
   height: 100%;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 /* style texte */
 h1 {
@@ -58,7 +57,7 @@ h3 {
   font-size: 30px;
   line-height: 0.2;
 }
-p{
+p {
   color: hsla(0, 0%, 75.3%, 0.8);
   font-size: 16px;
   line-height: 0.2;
@@ -82,7 +81,6 @@ h2 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-
 }
 
 nav {
@@ -92,6 +90,7 @@ nav {
   left: 0;
   right: 0;
   height: 70px;
+  z-index: 10;
 }
 
 .hidden-logoNav,
@@ -183,7 +182,7 @@ haut {
 .btn-left {
   margin-right: 40px;
 }
-#asterix{
+#asterix {
   font-size: 11px;
 }
 centro {
@@ -191,7 +190,6 @@ centro {
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
-  margin-top: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -199,6 +197,7 @@ centro {
 
 bas {
   grid-area: bas;
+  position: relative;
 }
 
 footer {
@@ -237,12 +236,23 @@ footer ul {
 .grille2 {
   text-align: center;
 }
-
+.grille3 {
+  max-width: 1440px;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
 .icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin: 80px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+text-align: center;
+}
+
+.icons img {
+  width: 342px;
+  height: 171px;
 }
 
 .content-price :nth-child(1) {
@@ -339,7 +349,6 @@ footer ul {
 }
 
 @media only screen and (max-width: 768px) {
-
   #grille {
     display: grid;
     grid-template-columns: 1fr;
@@ -351,28 +360,25 @@ footer ul {
     grid-gap: 5px;
     margin: 40px;
   }
-  .background-image{
-    background-image:url(https://cannonball-cdn.bamgrid.com/assets/originals/108839_334165_DIS_STAR_Mobile-x2_Portrait_ROUTE_A_st22-01@1x.jpg);  
+  .background-image {
+    background-image: url(https://cannonball-cdn.bamgrid.com/assets/originals/108839_334165_DIS_STAR_Mobile-x2_Portrait_ROUTE_A_st22-01@1x.jpg);
   }
   haut .content-top {
     text-align: center;
     margin-top: 180px;
-   
   }
-  .buttons-top  {
+  .buttons-top {
     display: flex;
     align-items: center;
   }
-  .content-price{
+  .content-price {
     text-align: center;
     display: flex;
     justify-content: center;
-  
   }
-  .btn-top-flex  {
+  .btn-top-flex {
     display: flex;
     flex-direction: column;
-  
   }
   #logo img {
     width: 200px;
@@ -381,7 +387,6 @@ footer ul {
 
   centro {
     flex-direction: column;
-    margin-top: 200px;
   }
   img {
     max-width: 445px;
@@ -402,7 +407,7 @@ footer ul {
     font-size: 24px;
     line-height: 0.2;
   }
-  p{
+  p {
     line-height: 1;
   }
 }
