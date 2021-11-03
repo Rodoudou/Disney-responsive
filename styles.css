@@ -1,0 +1,10 @@
+.globe {
+    height: 50px;
+    width: 18px;
+    z-index: 70;
+    transform: translateY(-50%);
+  
+  }
+  .globe path{
+    fill: #f9f9f9;
+  }

@@ -9,15 +9,12 @@
 body {
   font-family: "Avenir", sans-serif;
   font-size: 16px;
+  padding: 0;
+  margin: 0;
   width: 100vw;
   height: 100vh;
-  margin: 0;
   color: #f9f9f9;
   background-color: #040714;
-  /* background-image: url("https://cannonball-cdn.bamgrid.com/assets/originals/108839_334165_DIS_STAR_CD_Desktop_ROUTE_A-ALT_st24@1,5x.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: top; */
 }
 
 #grille {
@@ -28,9 +25,111 @@ body {
     "banner banner"
     "centro centro"
     "bas bas";
-  grid-gap: 10px;
   margin: 80px;
+  height: 100%;
 }
+
+nav {
+  grid-area: nav;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  z-index: 10;
+}
+
+haut {
+  grid-area: haut;
+  display: flex;
+  height: auto;
+}
+
+centro {
+  background-color: tomato;
+  grid-area: centro;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+margin-top: 600px;
+
+}
+
+bas {
+  grid-area: bas;
+  height: auto;
+  margin-top: 300px;
+}
+
+footer {
+  font-size: 12px;
+  color: hsla(0, 0%, 75.3%, 0.8);
+  text-align: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+footer li a{
+  cursor: pointer;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+   color: hsla(0, 0%, 75.3%, 0.8);;
+}
+
+#language-selector {
+  padding: 0 26px;
+  margin: 8px auto;
+  z-index: 1;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #f9f9f9;
+  text-align: center;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  width: 96px;
+  height: 22px;
+}
+.language-selector, ul:nth-child(1){
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+
+}
+
+.language-selector .globe {
+  pointer-events: none;
+  z-index: 0;
+  height: 50px;
+  width: 18px;
+  left: 100px;
+}
+
+.globe path{
+  fill: #f9f9f9;
+}
+
+.down{
+  width: 22px;
+}
+
 .background-image {
   background-image: url(https://cannonball-cdn.bamgrid.com/assets/originals/108839_334165_DIS_STAR_CD_Desktop_ROUTE_A-ALT_st24@1,5x.jpg);
   position: absolute;
@@ -41,7 +140,6 @@ body {
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
-
   height: 100%;
   background-position: top;
   background-size: cover;
@@ -61,6 +159,11 @@ p {
   color: hsla(0, 0%, 75.3%, 0.8);
   font-size: 16px;
   line-height: 0.2;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 li {
@@ -83,14 +186,26 @@ h2 {
   font-weight: bold;
 }
 
-nav {
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  z-index: 10;
+.content-top {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-top-flex {
+  display: flex;
+}
+
+.btn-left {
+  margin-right: 40px;
+}
+#asterix {
+  font-size: 11px;
 }
 
 .hidden-logoNav,
@@ -156,67 +271,6 @@ nav {
   transition: all 1.5s ease-out;
 }
 
-banner {
-  grid-area: banner;
-}
-haut {
-  grid-area: haut;
-  display: flex;
-  position: relative;
-}
-.content-top {
-  /* position: relative; */
-  display: flex;
-  flex-direction: column;
-}
-
-.buttons-top {
-  display: flex;
-  flex-direction: column;
-}
-
-.btn-top-flex {
-  display: flex;
-}
-
-.btn-left {
-  margin-right: 40px;
-}
-#asterix {
-  font-size: 11px;
-}
-centro {
-  grid-area: centro;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  display: flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-bas {
-  grid-area: bas;
-  position: relative;
-}
-
-footer {
-  font-size: 12px;
-  color: hsla(0, 0%, 75.3%, 0.8);
-  text-align: center;
-}
-
-footer p {
-  font-size: 12px;
-}
-
-footer ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-}
-
 .grid-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -232,7 +286,9 @@ footer ul {
 }
 .grille1 {
   text-align: center;
+  line-height: 1.5px;
 }
+
 .grille2 {
   text-align: center;
 }
@@ -247,12 +303,19 @@ footer ul {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 10px;
-text-align: center;
+  text-align: center;
+  position: relative;
+  max-width: 1440px;
+  max-height: 600px;
 }
 
 .icons img {
-  width: 342px;
+  /* width: 342px; */
   height: 171px;
+  transition: transform 0.4s;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
 }
 
 .content-price :nth-child(1) {
@@ -409,5 +472,45 @@ text-align: center;
   }
   p {
     line-height: 1;
+  }
+}
+
+@media only screen and (max-width: 1560px) {
+  .icons img {
+    width: 332px;
+    height: 166px;
+  }
+}
+
+@media only screen and (max-width: 1480px) {
+  .icons img {
+    width: 312.5px;
+    height: 156.25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .icons img {
+    width: 203.75px;
+    height: 101.88px;
+  }
+  .icons h3 {
+    font-size: 22px;
+  }
+  .icons p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1002px) {
+  .icons img {
+    width: 159.25px;
+    height: 79.63px;
+  }
+  .icons h3 {
+    font-size: 16px;
+  }
+  .icons p {
+    font-size: 11px;
   }
 }
