@@ -58,6 +58,20 @@ centro {
   
 }
 
+centro img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+.liste1{
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
 
 
 bas {
@@ -317,21 +331,21 @@ h2 {
 
 .grille2 {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px;
-  text-align: center;
   position: relative;
   max-width: 1440px;
   max-height: 600px;
+  text-align: center;
 }
 
 .icons img {
-  /* width: 342px; */
   height: 171px;
   transition: transform 0.4s;
   display: inline-block;
@@ -498,7 +512,7 @@ h2 {
   centro {
     flex-direction: column;
   }
-  img {
+  centro img {
     max-width: 445px;
     max-height: 363.73px;
   }
